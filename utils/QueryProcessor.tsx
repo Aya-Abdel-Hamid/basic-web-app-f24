@@ -1,3 +1,5 @@
+import { findLargestNumber } from "./mathUtils";
+
 export default function QueryProcessor(query: string): string {
   if (query.toLowerCase().includes("shakespeare")) {
     return (
@@ -12,8 +14,16 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("what is your name")) {
-    return "My name is Aya."; // Replace with your name
+    return "Aya."; // Replace with your name
   }
+
+  if (query.toLowerCase().includes("largest number")) {
+    const numbers = [78, 64, 48]; // Example sequence
+    return `The largest number is ${findLargestNumber(numbers)}`;
+  }
+
+  // other query handling logic...
 
   return "";
 }
+
