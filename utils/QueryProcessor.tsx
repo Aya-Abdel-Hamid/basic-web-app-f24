@@ -8,9 +8,12 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("andrew id")) {
-    //TODO add your Andrew ID below
-    //TODO update the corresponding test case in __tests__
-    return ( "ayaa" );
+    return "ayaa"; // Your Andrew ID
   }
+
+  if (query.toLowerCase().includes("what is your name")) {
+    return "My name is Aya."; // Replace with your name
+  }
+
   return "";
 }

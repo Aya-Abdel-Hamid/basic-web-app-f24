@@ -1,5 +1,5 @@
 import QueryProcessor from "../../utils/QueryProcessor";
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 
 describe("QueryProcessor", () => {
     test("should return a string", () => {
@@ -18,12 +18,17 @@ describe("QueryProcessor", () => {
           ));
     });
 
-    // TODO: You should update the test below after you add your andrew id
-    test('should return my andrew id', () => {
+    // Test for Andrew ID
+    test('should return my Andrew ID', () => {
         const query = "what's your Andrew ID?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe((
-            "ayaa"
-          ));
+        expect(response).toBe("ayaa"); // Replace "ayaa" with your actual ID if needed
+    });
+
+    // Test for "What is your name?"
+    test('should return my name', () => {
+        const query = "What is your name?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("My name is Aya."); // Replace "Aya" with your name
     });
 });
